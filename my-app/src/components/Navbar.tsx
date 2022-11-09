@@ -1,13 +1,13 @@
 import React from 'react'
-import Links from './Links'
+import SiteLinks from './SiteLinks'
 
 const Navbar = () => {
     return (
         <div>
-            <Links title="Home" urlpath=""/>
-            <Links title="Chat" urlpath=""/>
-            <Links title="Employees" urlpath=""/>
-            <Links title="Settings" urlpath=""/>
+            <SiteLinks title="Home" urlpath=""/>
+            <SiteLinks title="Chat" urlpath=""/>
+            <SiteLinks title="Employees" urlpath=""/>
+            <SiteLinks title="Settings" urlpath=""/>
         </div>
     )
 }
