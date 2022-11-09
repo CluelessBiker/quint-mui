@@ -1,9 +1,9 @@
 import { Link } from '@mui/material'
-import React, { FC } from 'react'
+import { FC } from 'react'
 
 interface SiteLinksProps {
     title: string,
-    urlpath: string
+    urlpath?: string
 }
 
 const SiteLinks:FC<SiteLinksProps> = ({ title, urlpath }) => {
