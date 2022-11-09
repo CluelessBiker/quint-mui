@@ -1,6 +1,6 @@
 import { Grid } from '@mui/material'
 import React from 'react'
-import SiteLinks from './SiteLinks'
+import SiteLinks from '../../common/components/SiteLinks'
 
 const Navbar = () => {
     const styles = {
