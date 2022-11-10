@@ -3,7 +3,7 @@ import { FC } from 'react'
 
 interface SiteLinksProps {
     title: string,
-    urlpath?: string
+    urlpath: string
 }
 
 const SiteLinks:FC<SiteLinksProps> = ({ title, urlpath }) => {
