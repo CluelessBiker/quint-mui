@@ -7,9 +7,10 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TablePagination from '@mui/material/TablePagination';
 import TableRow from '@mui/material/TableRow';
+// import Employee from './Employee';
 
 interface Column {
-  id: 'firstname' | 'lastname' | 'location' | 'age' | 'density';
+  id: 'profileimage' | 'firstname' | 'lastname' | 'location' | 'age';
   label: string;
   minWidth?: number;
   align?: 'right';
@@ -17,6 +18,13 @@ interface Column {
 }
 
 const columns: readonly Column[] = [
+  {
+    id: 'profileimage',
+    label: 'Photo',
+    minWidth: 170,
+    align: 'right',
+    format: (value: number) => value.toFixed(2),
+  },
   { id: 'firstname', label: 'First\u00a0Name', minWidth: 170 },
   { id: 'lastname', label: 'Last\u00a0Name', minWidth: 100 },
   {
@@ -32,13 +40,6 @@ const columns: readonly Column[] = [
     minWidth: 170,
     align: 'right',
     format: (value: number) => value.toLocaleString('en-US'),
-  },
-  {
-    id: 'density',
-    label: 'Density',
-    minWidth: 170,
-    align: 'right',
-    format: (value: number) => value.toFixed(2),
   },
 ];
 
@@ -61,6 +62,13 @@ function createData(
 }
 
 const rows = [
+  // <Employee
+  //   profileimage={{ alttext:'photo', imageurl:'https://upload.wikimedia.org/wikipedia/en/e/eb/Arthur_Dent_Livid.jpg'}}
+  //   firstname="Arthur"
+  //   lastname="Dent"
+  //   location="Universe"
+  //   age="33"
+  // />
   createData('India', 'IN', 1324171354, 3287263),
   createData('China', 'CN', 1403500365, 9596961),
   createData('Italy', 'IT', 60483973, 301340),
