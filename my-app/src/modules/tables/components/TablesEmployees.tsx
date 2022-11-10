@@ -3,12 +3,12 @@ import Tables from './Tables'
 const TablesEmployees = () => {
     return (
         <Tables
-            tableheading="active employees"
-            columnheading1="Avatar"    
-            columnheading2="First Name"
-            columnheading3="Last Name"
-            columnheading4="Location"
-            columnheading5="Age"
+            tablehead="Active Employees"
+            columnhead1="Avatar"    
+            columnhead2="First Name"
+            columnhead3="Last Name"
+            columnhead4="Location"
+            columnhead5="Age"
         />
     )
 }

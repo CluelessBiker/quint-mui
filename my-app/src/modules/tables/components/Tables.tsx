@@ -5,6 +5,7 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import { FC } from 'react';
 
 function createData(
     name: string,
@@ -36,41 +37,41 @@ interface TablesProps {
 const Tables:FC<TablesProps> = ({ tablehead, columnhead1, columnhead2, columnhead3, columnhead4, columnhead5 }) => {
     return (
         <TableContainer
-        component={Paper}
-        sx={{
-            borderRadius: '20px',
-            border:'1px solid #333333',
-            backgroundColor: '#FAFAFA'
-        }}
+            component={Paper}
+            sx={{
+                borderRadius: '20px',
+                border:'1px solid #333333',
+                backgroundColor: '#FAFAFA',
+            }}
         >
             <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense table">
-                <TableHead>
-                <TableRow>
-                    <TableCell align="center" colSpan={12}>
-                        { tablehead }
-                    </TableCell>
-                </TableRow>
-                <TableRow>
-                    <TableCell>{ columnhead1 }</TableCell>
-                    <TableCell align="right">{ columnhead2 }</TableCell>
-                    <TableCell align="right">{ columnhead3 }</TableCell>
-                    <TableCell align="right">{ columnhead4 }</TableCell>
-                    <TableCell align="right">{ columnhead5 }</TableCell>
-                </TableRow>
+                <TableHead sx={{ height: 'auto' }}>
+                    <TableRow>
+                        <TableCell align="center" colSpan={12}>
+                            { tablehead }
+                        </TableCell>
+                    </TableRow>
+                    <TableRow>
+                        <TableCell>{ columnhead1 }</TableCell>
+                        <TableCell align="right">{ columnhead2 }</TableCell>
+                        <TableCell align="right">{ columnhead3 }</TableCell>
+                        <TableCell align="right">{ columnhead4 }</TableCell>
+                        <TableCell align="right">{ columnhead5 }</TableCell>
+                    </TableRow>
                 </TableHead>
                 <TableBody>
                     {rows.map((row) => (
                         <TableRow
-                        key={row.name}
-                        sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+                            key={row.name}
+                            sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                         >
-                        <TableCell component="th" scope="row">
-                            {row.name}
-                        </TableCell>
-                        <TableCell align="right">{row.calories}</TableCell>
-                        <TableCell align="right">{row.fat}</TableCell>
-                        <TableCell align="right">{row.carbs}</TableCell>
-                        <TableCell align="right">{row.protein}</TableCell>
+                            <TableCell component="th" scope="row">
+                                {row.name}
+                            </TableCell>
+                            <TableCell align="right">{row.calories}</TableCell>
+                            <TableCell align="right">{row.fat}</TableCell>
+                            <TableCell align="right">{row.carbs}</TableCell>
+                            <TableCell align="right">{row.protein}</TableCell>
                         </TableRow>
                     ))}
                 </TableBody>
