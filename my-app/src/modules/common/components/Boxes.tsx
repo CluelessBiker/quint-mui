@@ -14,7 +14,6 @@ const Boxes:FC<BoxesProps> = ({ bgcolor }) => {
                 border:'1px solid #333333',
                 height: '100px',
             }}>
-
         </Container>
     )
 }

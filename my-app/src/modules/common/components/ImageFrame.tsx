@@ -14,6 +14,7 @@ const ImageFrame:FC<ImageFrameProps> = ({ imageurl, height }) => {
                 borderRadius: '20px',
                 border:'1px solid #333333',
                 height: { height },
+                marginBottom: '20px',
             }}
         >   
         </Container>
