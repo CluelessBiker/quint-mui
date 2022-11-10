@@ -47,14 +47,21 @@ function NavbarTwo() {
     };
 
     return (
-        <AppBar position="static" sx={{backgroundColor: '#FFFFFF', padding: '20px 0'}}>
+        <AppBar
+            position="static"
+            sx={{
+                backgroundColor: '#FFFFFF',
+                padding: '20px 0',
+                boxShadow: 'none',
+            }}
+        >
         <Container
             maxWidth="xl"
             sx={{
                 backgroundColor: '#FAFAFA',
                 border:'1px solid #333333',
                 borderRadius: '20px',
-                width: '90%'
+                width: '95%',
             }}>
             <Toolbar disableGutters>
             {/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}

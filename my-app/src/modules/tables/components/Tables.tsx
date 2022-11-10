@@ -47,16 +47,16 @@ const Tables:FC<TablesProps> = ({ tablehead, columnhead1, columnhead2, columnhea
             <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense table">
                 <TableHead sx={{ height: 'auto' }}>
                     <TableRow>
-                        <TableCell align="center" colSpan={12}>
+                        <TableCell align="left" colSpan={12} sx={{textTransform: 'uppercase'}}>
                             { tablehead }
                         </TableCell>
                     </TableRow>
                     <TableRow>
-                        <TableCell>{ columnhead1 }</TableCell>
-                        <TableCell align="right">{ columnhead2 }</TableCell>
-                        <TableCell align="right">{ columnhead3 }</TableCell>
-                        <TableCell align="right">{ columnhead4 }</TableCell>
-                        <TableCell align="right">{ columnhead5 }</TableCell>
+                        <TableCell align="left">{ columnhead1 }</TableCell>
+                        <TableCell align="left">{ columnhead2 }</TableCell>
+                        <TableCell align="left">{ columnhead3 }</TableCell>
+                        <TableCell align="left">{ columnhead4 }</TableCell>
+                        <TableCell align="left">{ columnhead5 }</TableCell>
                     </TableRow>
                 </TableHead>
                 <TableBody>
@@ -68,10 +68,10 @@ const Tables:FC<TablesProps> = ({ tablehead, columnhead1, columnhead2, columnhea
                             <TableCell component="th" scope="row">
                                 {row.name}
                             </TableCell>
-                            <TableCell align="right">{row.calories}</TableCell>
-                            <TableCell align="right">{row.fat}</TableCell>
-                            <TableCell align="right">{row.carbs}</TableCell>
-                            <TableCell align="right">{row.protein}</TableCell>
+                            <TableCell align="left">{row.calories}</TableCell>
+                            <TableCell align="left">{row.fat}</TableCell>
+                            <TableCell align="left">{row.carbs}</TableCell>
+                            <TableCell align="left">{row.protein}</TableCell>
                         </TableRow>
                     ))}
                 </TableBody>
