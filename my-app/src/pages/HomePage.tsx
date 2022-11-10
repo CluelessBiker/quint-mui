@@ -10,7 +10,7 @@ const HomePage = () => {
         <div>
             <Grid
                 container
-                spacing={2}
+                spacing={0}
                 sx={{
                     width: '92%',
                     margin: '0 auto',
