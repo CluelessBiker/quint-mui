@@ -47,7 +47,7 @@ function NavbarTwo() {
     };
 
     return (
-        <AppBar position="static">
+        <AppBar position="static" sx={{backgroundColor: '#FFFFFF', padding: '20px 0'}}>
         <Container
             maxWidth="xl"
             sx={{
