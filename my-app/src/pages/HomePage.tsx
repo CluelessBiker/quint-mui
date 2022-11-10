@@ -1,4 +1,4 @@
-import { Grid } from '@mui/material'
+import { Container, Grid } from '@mui/material'
 import Boxes from '../modules/common/components/Boxes'
 import SiteButtons from '../modules/common/components/SiteButtons'
 import TablesEmployees from '../modules/tables/components/TablesEmployees'
@@ -47,28 +47,36 @@ const HomePage = () => {
                 </Grid>
             </Grid>
 
-            <Grid
-                container
-                spacing={2}
+            <Container
                 sx={{
                     width: '92%',
                     margin: '0 auto',
                     padding: '0',
                 }}
             >
-                <Grid item xs={6} sm={3}>
-                    <SiteButtons path="/" name="Add Client"/>
+                <h3>Quick Actions</h3>
+                <Grid
+                    container
+                    // spacing={2}
+                    justifyContent="space-between"
+                    sx={{
+                        padding: '0',
+                    }}
+                >
+                    <Grid item xs={6} sm={3} sx={{margin: '0 0 10px 0'}}>
+                        <SiteButtons path="/" name="Add Client"/>
+                    </Grid>
+                    <Grid item xs={6} sm={3} sx={{margin: '0 0 10px 0'}}>
+                        <SiteButtons path="/" name="Add Employee"/>
+                    </Grid>
+                    <Grid item xs={6} sm={3} sx={{margin: '0 0 10px 0'}}>
+                        <SiteButtons path="/" name="Undefined"/>
+                    </Grid>
+                    <Grid item xs={6} sm={3} sx={{margin: '0 0 10px 0'}}>
+                        <SiteButtons path="/" name="Undefined"/>
+                    </Grid>
                 </Grid>
-                <Grid item xs={6} sm={3}>
-                    <SiteButtons path="/" name="Add Employee"/>
-                </Grid>
-                <Grid item xs={6} sm={3}>
-                    <SiteButtons path="/" name="Undefined"/>
-                </Grid>
-                <Grid item xs={6} sm={3}>
-                    <SiteButtons path="/" name="Undefined"/>
-                </Grid>
-            </Grid>
+            </Container>
         </div>
     )
 }

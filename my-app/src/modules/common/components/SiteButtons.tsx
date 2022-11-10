@@ -20,7 +20,7 @@ const SiteButtons:FC<SiteButtonsProps> = ({ name, path }) => {
                     borderRadius: '5px',
                     border:'1px solid #333333',
                     width: '150px',
-                    color: '#000000'
+                    color: '#000000',
                 }}
             >
                 { name }
