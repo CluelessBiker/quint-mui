@@ -61,7 +61,7 @@ function NavbarTwo() {
                 backgroundColor: '#FAFAFA',
                 border:'1px solid #333333',
                 borderRadius: '20px',
-                width: '95%',
+                width: '95%'
             }}>
             <Toolbar disableGutters>
             {/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
@@ -97,7 +97,7 @@ function NavbarTwo() {
                 onClick={handleOpenNavMenu}
                 color="inherit"
                 >
-                <MenuIcon />
+                <MenuIcon sx={{ color: '#000000'}}/>
                 </IconButton>
                 <Menu
                 id="menu-appbar"
