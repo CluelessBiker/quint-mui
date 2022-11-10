@@ -9,8 +9,7 @@ const Boxes:FC<BoxesProps> = ({ bgcolor }) => {
     return (
         <Container 
             sx={{
-                backgroundColor: { bgcolor },
-                // backgroundColor: '#000000',
+                backgroundColor: `#${ bgcolor }`,
                 borderRadius: '20px',
                 border:'1px solid #333333',
                 height: '100px',

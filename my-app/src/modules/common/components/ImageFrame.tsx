@@ -3,14 +3,14 @@ import { FC } from 'react';
 
 interface ImageFrameProps {
     imageurl: string,
-    height: number,
+    height: string,
 }
 
 const ImageFrame:FC<ImageFrameProps> = ({ imageurl, height }) => {
     return (
         <Container
             sx={{
-                backgroundImage: { imageurl },
+                backgroundImage:`url(${ imageurl })`,
                 borderRadius: '20px',
                 border:'1px solid #333333',
                 height: { height },

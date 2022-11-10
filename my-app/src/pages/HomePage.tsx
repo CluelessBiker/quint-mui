@@ -1,5 +1,6 @@
 import { Container, Grid } from '@mui/material'
 import Boxes from '../modules/common/components/Boxes'
+import ImageFrame from '../modules/common/components/ImageFrame'
 import SiteButtons from '../modules/common/components/SiteButtons'
 import TablesEmployees from '../modules/tables/components/TablesEmployees'
 import TablesNewClients from '../modules/tables/components/TablesNewClients'
@@ -17,16 +18,16 @@ const HomePage = () => {
                 }}
             >
                 <Grid item xs={6} sm={3}>
-                    <Boxes bgcolor='#C586E9'/>
+                    <Boxes bgcolor='C586E9'/>
                 </Grid>
                 <Grid item xs={6} sm={3}>
-                    <Boxes bgcolor='#6B5AA2'/>
+                    <Boxes bgcolor='6B5AA2'/>
                 </Grid>
                 <Grid item xs={6} sm={3}>
-                    <Boxes bgcolor='#D2CEF9'/>
+                    <Boxes bgcolor='D2CEF9'/>
                 </Grid>
                 <Grid item xs={6} sm={3}>
-                    <Boxes bgcolor='#4C7FAC'/>
+                    <Boxes bgcolor='4C7FAC'/>
                 </Grid>
             </Grid>
 
@@ -76,6 +77,13 @@ const HomePage = () => {
                         <SiteButtons path="/" name="Undefined"/>
                     </Grid>
                 </Grid>
+            </Container>
+
+            <Container>
+                <ImageFrame
+                    imageurl="https://images.squarespace-cdn.com/content/v1/55bebb51e4b036c52ebe8c45/1559487728470-0G8BS34R5VXN2U91MKKD/honeycomb+wall+paint+accent"
+                    height="200px"
+                />
             </Container>
         </div>
     )
