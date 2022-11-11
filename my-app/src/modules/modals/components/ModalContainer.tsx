@@ -6,9 +6,10 @@ interface ModalContainerProps {
     title: string,
     bodytext?: string,
     bgcolor?: string,
+    showhide: string,
 }
 
-const ModalContainer:FC<ModalContainerProps> = ({ title, bodytext, bgcolor }) => {
+const ModalContainer:FC<ModalContainerProps> = ({ title, bodytext, bgcolor, showhide }) => {
     return (
         <Container
             sx={{
@@ -18,7 +19,7 @@ const ModalContainer:FC<ModalContainerProps> = ({ title, bodytext, bgcolor }) =>
             }}
         >
             <Typography variant="h6" gutterBottom>{ title }</Typography>
-            <Typography variant="body2" gutterBottom>{ bodytext }</Typography>
+            <Typography variant="body2" gutterBottom sx={{display: { showhide }}}>{ bodytext }</Typography>
 
             <SiteButtons name="Cancel" path="/" bgcolor="FC9595"/>
             <SiteButtons name="Save" path="/" bgcolor="87DAC1"/>
