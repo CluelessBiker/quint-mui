@@ -1,16 +1,11 @@
 import { Container, Grid, Typography } from '@mui/material'
+import HRLine from '../modules/common/components/HRLine'
 import SiteButtons from '../modules/common/components/SiteButtons'
 import TablesEmployees from '../modules/tables/components/TablesEmployees'
 
 const EmployeesPage = () => {
 
-    const styles = {
-        Line: {
-            height: '2px',
-            background: '#333333',
-            borderRadius: '2px',
-        }
-    }
+    
     return (
         <Container
             sx={{
@@ -22,13 +17,19 @@ const EmployeesPage = () => {
             <Typography variant="h6" gutterBottom>Home -{'>'} Employees</Typography>
             <Grid
                 container
-                spacing={2}
+                spacing={0}
                 alignItems="center"
+                justifyContent="space-between"
+                sx={{
+                    padding: '0',
+                    margin: '50px auto',
+                }}
+
             >
-                <Grid item xs={11}>
-                    <div style={styles.Line}></div>
+                <Grid item xs={10} sx={{ padding: '0 10px' }}>
+                    <HRLine />
                 </Grid>
-                <Grid item xs={1}>
+                <Grid item xs={2}  sx={{ padding: '0 10px' }}>
                     <SiteButtons path="/" name="+ New employee" bgcolor="87DAC1"/>
                 </Grid>
             </Grid>
