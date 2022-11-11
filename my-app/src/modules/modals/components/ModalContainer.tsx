@@ -7,9 +7,10 @@ interface ModalContainerProps {
     bodytext?: string,
     bgcolor?: string,
     showhide: string,
+    children?: React.ReactNode,
 }
 
-const ModalContainer:FC<ModalContainerProps> = ({ title, bodytext, bgcolor, showhide }) => {
+const ModalContainer:FC<ModalContainerProps> = ({ title, bodytext, bgcolor, showhide, children }) => {
     return (
         <Container
             sx={{
@@ -19,6 +20,7 @@ const ModalContainer:FC<ModalContainerProps> = ({ title, bodytext, bgcolor, show
                 width: '500px',
                 padding: '20px',
                 textAlign: 'center',
+                margin: '20px auto',
             }}
         >
             <Typography
@@ -39,6 +41,8 @@ const ModalContainer:FC<ModalContainerProps> = ({ title, bodytext, bgcolor, show
             >
                 { bodytext }
             </Typography>
+
+            {children}
 
             <SiteButtons name="Cancel" path="/" bgcolor="FC9595"/>
             <SiteButtons name="Save" path="/" bgcolor="87DAC1"/>
