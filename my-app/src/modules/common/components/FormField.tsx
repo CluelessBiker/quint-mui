@@ -12,7 +12,8 @@ const FormField:FC<FormFieldProps> = ({ label }) => {
             label={ label }
             variant="outlined"
             sx={{
-                width: '300px',
+                width: '400px',
+                margin: '0 0 30px 0',
             }}
         />
     )
