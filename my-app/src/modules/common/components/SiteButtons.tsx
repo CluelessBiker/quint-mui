@@ -1,13 +1,14 @@
 import { Button, Link } from '@mui/material';
-import React, { FC } from 'react';
+import { FC } from 'react';
 
 
 interface SiteButtonsProps {
     name: string,
     path: string,
+    bgcolor?: string,
 }
 
-const SiteButtons:FC<SiteButtonsProps> = ({ name, path }) => {
+const SiteButtons:FC<SiteButtonsProps> = ({ name, path, bgcolor }) => {
     return (
         <Link
             href={ path }
@@ -17,10 +18,12 @@ const SiteButtons:FC<SiteButtonsProps> = ({ name, path }) => {
             <Button
                 variant="outlined"
                 sx={{
-                    borderRadius: '5px',
+                    borderRadius: '10px',
                     border:'1px solid #333333',
                     width: '150px',
                     color: '#000000',
+                    textTransform: 'none',
+                    backgroundColor: `#${ bgcolor }`,
                 }}
             >
                 { name }

@@ -1,8 +1,8 @@
-import { Container, Grid } from '@mui/material'
+import { Container, Grid, Typography } from '@mui/material'
 import Boxes from '../modules/common/components/Boxes'
 import ImageFrame from '../modules/common/components/ImageFrame'
 import SiteButtons from '../modules/common/components/SiteButtons'
-import TablesEmployees from '../modules/tables/components/TablesEmployees'
+import TablesActiveEmployees from '../modules/tables/components/TablesActiveEmployees'
 import TablesNewClients from '../modules/tables/components/TablesNewClients'
 
 const HomePage = () => {
@@ -41,7 +41,7 @@ const HomePage = () => {
                 }}
             >
                 <Grid item xs={12} sm={6}>
-                    <TablesEmployees />
+                    <TablesActiveEmployees />
                 </Grid>
                 <Grid item xs={12} sm={6}>
                     <TablesNewClients />
@@ -55,7 +55,7 @@ const HomePage = () => {
                     padding: '0',
                 }}
             >
-                <h3>Quick Actions</h3>
+                <Typography variant="h6" gutterBottom>Quick Actions</Typography>
                 <Grid
                     container
                     // spacing={2}
