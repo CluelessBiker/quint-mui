@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
+import ModalContainer from './modules/modals/components/ModalContainer';
 import NavbarTwo from './modules/navbar/components/NavbarTwo';
 import EmployeesPage from './pages/EmployeesPage';
 import HomePage from './pages/HomePage';
@@ -18,6 +19,7 @@ function App() {
           <Route path="/dashboard" element={<h1>dashboard</h1>}/>
         </Routes>
       </BrowserRouter>
+      <ModalContainer title="Delete Employee" bodytext="User {username} will be deleted" showhide="block"/>
       
     </div>
   );

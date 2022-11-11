@@ -16,10 +16,29 @@ const ModalContainer:FC<ModalContainerProps> = ({ title, bodytext, bgcolor, show
                 backgroundColor: `#${ bgcolor }`,
                 borderRadius: '20px',
                 border:'1px solid #333333',
+                width: '500px',
+                padding: '20px',
+                textAlign: 'center',
             }}
         >
-            <Typography variant="h6" gutterBottom>{ title }</Typography>
-            <Typography variant="body2" gutterBottom sx={{display: { showhide }}}>{ bodytext }</Typography>
+            <Typography
+                variant="h6"
+                gutterBottom
+                sx={{marginBottom: '20px'}}
+            >
+                { title }
+            </Typography>
+
+            <Typography
+                variant="body2"
+                gutterBottom
+                sx={{
+                    display:`${ showhide }`,
+                    marginBottom: '20px',
+                }}
+            >
+                { bodytext }
+            </Typography>
 
             <SiteButtons name="Cancel" path="/" bgcolor="FC9595"/>
             <SiteButtons name="Save" path="/" bgcolor="87DAC1"/>
