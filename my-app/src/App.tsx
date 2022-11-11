@@ -1,6 +1,5 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
-import ModalAddEditEmployee from './modules/modals/components/ModalAddEditEmployee';
 import NavbarTwo from './modules/navbar/components/NavbarTwo';
 import EmployeesPage from './pages/EmployeesPage';
 import HomePage from './pages/HomePage';
@@ -19,7 +18,6 @@ function App() {
           <Route path="/dashboard" element={<h1>dashboard</h1>}/>
         </Routes>
       </BrowserRouter>
-      <ModalAddEditEmployee/>
     </div>
   );
 }
