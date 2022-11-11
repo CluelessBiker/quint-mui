@@ -3,6 +3,7 @@ import './App.css';
 import NavbarTwo from './modules/navbar/components/NavbarTwo';
 import EmployeesPage from './pages/EmployeesPage';
 import HomePage from './pages/HomePage';
+import SettingsPage from './pages/SettingsPage';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/profile" element={<h1>profile</h1>}/>
           <Route path="/account" element={<h1>account</h1>}/>
           <Route path="/dashboard" element={<h1>dashboard</h1>}/>
+          <Route path="/settings" element={<SettingsPage />}/>
         </Routes>
       </BrowserRouter>
     </div>
