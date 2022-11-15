@@ -1,6 +1,7 @@
 import { Container, Grid, Typography } from '@mui/material'
 import HRLine from '../modules/common/components/HRLine'
-import SiteButtons from '../modules/common/components/SiteButtons'
+// import SiteButtons from '../modules/common/components/SiteButtons'
+import ModalAddProduct from '../modules/modals/components/ModalAddProduct'
 import ProductsTable from '../modules/tables/components/ProductsTable'
 
 const EmployeesPage = () => {
@@ -29,7 +30,8 @@ const EmployeesPage = () => {
                     <HRLine />
                 </Grid>
                 <Grid item xs={2}  sx={{ padding: '0 10px' }}>
-                    <SiteButtons path="/" name="+ New employee" bgcolor="87DAC1"/>
+                    {/* <SiteButtons path="/" name="+ New employee" bgcolor="87DAC1"/> */}
+                    <ModalAddProduct />
                 </Grid>
             </Grid>
 
