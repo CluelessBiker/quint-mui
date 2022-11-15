@@ -5,7 +5,6 @@ import TablesEmployees from '../modules/tables/components/TablesEmployees'
 
 const EmployeesPage = () => {
 
-    
     return (
         <Container
             sx={{

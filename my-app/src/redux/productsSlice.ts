@@ -6,7 +6,7 @@ interface ProductState {
 }
 
 // Breaks down the array of objects for the ProductState products key
-interface Product {
+export interface Product {
     id: number,
     title: string,
     description: string,
@@ -20,7 +20,7 @@ interface Product {
     images: string[],
 }
 
-const initialState: ProductState = {
+export const initialState: ProductState = {
     products: [
         {
             id: 1,
