@@ -1,7 +1,8 @@
 import { Container, Grid, Typography } from '@mui/material'
 import HRLine from '../modules/common/components/HRLine'
 import SiteButtons from '../modules/common/components/SiteButtons'
-import TablesEmployees from '../modules/tables/components/TablesEmployees'
+import ProductsTable from '../modules/tables/components/ProductsTable'
+// import TablesEmployees from '../modules/tables/components/TablesEmployees'
 
 const EmployeesPage = () => {
 
@@ -33,7 +34,8 @@ const EmployeesPage = () => {
                 </Grid>
             </Grid>
 
-            <TablesEmployees />
+            {/* <TablesEmployees /> */}
+            <ProductsTable />
 
         </Container>
     )

@@ -90,7 +90,7 @@ const ProductsTable = () => {
                             <TableCell align="left">{row.stock}</TableCell>
                             <TableCell align="left">{row.brand}</TableCell>
                             <TableCell align="left">{row.category}</TableCell>
-                            <TableCell align="left">{row.thumbnail}</TableCell>
+                            <TableCell align="left"><img src={row.thumbnail} alt={row.title}/></TableCell>
                             {/* <TableCell align="left">{row.}</TableCell> */}
                         </TableRow>
                     ))}
