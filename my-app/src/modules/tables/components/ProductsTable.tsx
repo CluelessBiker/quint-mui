@@ -43,7 +43,7 @@ import { initialState, Product } from '../../../redux/productsSlice';
 
 
 
-const Tables = () => {
+const ProductsTable = () => {
     const rows = initialState.products;
     return (
         <TableContainer
@@ -100,4 +100,4 @@ const Tables = () => {
     )
 }
 
-export default Tables
+export default ProductsTable
