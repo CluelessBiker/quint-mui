@@ -8,7 +8,7 @@ const style = {
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    width: 400,
+    width: '500px',
     bgcolor: 'background.paper',
     borderRadius: '20px',
     border:'1px solid #333333',
@@ -34,7 +34,7 @@ const ModalMUI:FC<ModalMUIProps> = ({ bgcolor, btnname, children }) => {
             sx={{
                 borderRadius: '10px',
                 border:'1px solid #333333',
-                width: '500px',
+                width: '155px',
                 color: '#000000',
                 textTransform: 'none',
                 backgroundColor: `#${ bgcolor }`,
