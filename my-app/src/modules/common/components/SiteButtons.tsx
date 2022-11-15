@@ -4,11 +4,12 @@ import { FC } from 'react';
 
 interface SiteButtonsProps {
     name: string,
-    path: string,
+    path?: string,
     bgcolor?: string,
+    clickfunct?: () => void,
 }
 
-const SiteButtons:FC<SiteButtonsProps> = ({ name, path, bgcolor }) => {
+const SiteButtons:FC<SiteButtonsProps> = ({ name, path, bgcolor, clickfunct }) => {
     return (
         <Link
             href={ path }
@@ -17,6 +18,7 @@ const SiteButtons:FC<SiteButtonsProps> = ({ name, path, bgcolor }) => {
         >
             <Button
                 variant="outlined"
+                onClick={clickfunct}
                 sx={{
                     borderRadius: '10px',
                     border:'1px solid #333333',
