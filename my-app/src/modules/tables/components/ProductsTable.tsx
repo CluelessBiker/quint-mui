@@ -7,6 +7,7 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 // import { useAppSelector } from '../../../redux/hooks';
 import { initialState, Product } from '../../../redux/productsSlice';
+import { Avatar } from '@mui/material';
 
 const ProductsTable = () => {
     const rows = initialState.products;
@@ -58,8 +59,7 @@ const ProductsTable = () => {
                             <TableCell align="left">{row.stock}</TableCell>
                             <TableCell align="left">{row.brand}</TableCell>
                             <TableCell align="left">{row.category}</TableCell>
-                            <TableCell align="left"><img src={row.thumbnail} alt={row.title}/></TableCell>
-                            {/* <TableCell align="left">{row.}</TableCell> */}
+                            <TableCell align="left"><Avatar alt={row.title} src={row.thumbnail} /></TableCell>
                         </TableRow>
                     ))}
                 </TableBody>
