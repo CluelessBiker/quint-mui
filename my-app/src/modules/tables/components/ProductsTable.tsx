@@ -5,10 +5,13 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+// import { useAppSelector } from '../../../redux/hooks';
 import { initialState, Product } from '../../../redux/productsSlice';
 
 const ProductsTable = () => {
     const rows = initialState.products;
+    // const products = useAppSelector(state => state.products.products)
+    // const rows = products
     return (
         <TableContainer
             component={Paper}
@@ -39,6 +42,7 @@ const ProductsTable = () => {
                     </TableRow>
                 </TableHead>
                 <TableBody>
+                    {/* {rows.map((row: Product) => ( */}
                     {rows.map((row: Product) => (
                         <TableRow
                             key={row.id}
