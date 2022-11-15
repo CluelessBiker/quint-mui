@@ -34,7 +34,7 @@ const ModalMUI:FC<ModalMUIProps> = ({ bgcolor, btnname, children }) => {
             sx={{
                 borderRadius: '10px',
                 border:'1px solid #333333',
-                width: '155px',
+                width: '500px',
                 color: '#000000',
                 textTransform: 'none',
                 backgroundColor: `#${ bgcolor }`,
