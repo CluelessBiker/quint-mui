@@ -1,9 +1,57 @@
 import { Typography } from '@mui/material'
+import { useState } from 'react'
+import { useAppDispatch } from '../../../redux/hooks'
+import { addProduct, Product } from '../../../redux/productsSlice'
 import FormField from '../../common/components/FormField'
 import SiteButtons from '../../common/components/SiteButtons'
 import ModalMUI from './ModalMUI'
 
 const ModalAddProduct = () => {
+    const appDispatch = useAppDispatch()
+
+    // const [title, setTitle] = useState<string>('');
+    // const [description, setDescription] = useState<string>('');
+    // const [discountPercentage, setDiscountPercentage] = useState<number>(0);
+    // const [stock, setStock] = useState<number>(0);
+    // const [brand, setBrand] = useState<string>('');
+    // const [category, setCategory] = useState<string>('');
+    // const [thumbnail, setThumbnail] = useState<string>(''); 
+    // const [price, setPrice] = useState<number>(0); 
+    // const [rating, setRating] = useState<number>(0); 
+
+    const [newProduct, setNewProduct] = useState<Product>({
+             id: 0,
+            title:'',
+            description:'',
+            discountPercentage:0,
+            stock:0,
+            brand:'',
+            category:'',
+            thumbnail:'',
+            price:0,
+            rating:0
+
+    })
+
+    console.log(newProduct)
+
+
+    const handleClick = () => {
+        // const newProduct: Product = {
+        //     id: 0,
+        //     title,
+        //     description,
+        //     discountPercentage,
+        //     stock,
+        //     brand,
+        //     category,
+        //     thumbnail,
+        //     price,
+        //     rating
+        // };
+        appDispatch(addProduct(newProduct))
+    }
+
     return (
         <ModalMUI bgcolor="87DAC1" btnname="+ New Employee">
             <Typography
@@ -13,19 +61,19 @@ const ModalAddProduct = () => {
             >
                 Add Product
             </Typography>
-
-            <FormField label="title"/>
-            <FormField label="description"/>
+            <FormField label="title" value={newProduct?.title} onChange={(event)=>{setNewProduct({...newProduct, title: event.target.value})}}/>
+            {/* <FormField label="title" value={title} onChange={(event)=>{setTitle(event.target.value)}}/> */}
+            {/* <FormField label="description"/>
             <FormField label="price"/>
             <FormField label="discountPercentage"/>
             <FormField label="rating"/>
             <FormField label="stock"/>
             <FormField label="brand"/>
             <FormField label="category"/>
-            <FormField label="thumbnail"/>
+            <FormField label="thumbnail"/> */}
 
-            <SiteButtons name="Cancel" path="/" bgcolor="FC9595"/>
-            <SiteButtons name="Save" path="/" bgcolor="87DAC1"/>
+            <SiteButtons name="Cancel" clickfunct={handleClick} bgcolor="FC9595"/>
+            <SiteButtons name="Save"  bgcolor="87DAC1"/>
         </ModalMUI>
     )
 }
