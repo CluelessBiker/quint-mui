@@ -38,7 +38,7 @@ const EmployeesPage = () => {
 
             <ProductsTable />
 
-            <button onClick={() => dispatch(addProduct(
+            {/* <button onClick={() => dispatch(addProduct(
                 {
                     id: 200,
                     title: 'doll',
@@ -51,7 +51,7 @@ const EmployeesPage = () => {
                     category: 'toys',
                     thumbnail: 'https://cdn.shopify.com/s/files/1/0264/2585/1957/products/PRES01_00_09cf03a8-2b1a-4d63-bfd8-3c674c2e3004_1024x1024@2x.jpg?v=1598284801',
                 }
-            ))}>add product</button>
+            ))}>add product</button> */}
 
         </Container>
     )
