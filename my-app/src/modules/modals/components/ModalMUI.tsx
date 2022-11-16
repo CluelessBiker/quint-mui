@@ -1,7 +1,7 @@
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Modal from '@mui/material/Modal';
-import { FC, useState } from 'react';
+import { FC, SetStateAction, useState, Dispatch } from 'react';
 
 const style = {
     position: 'absolute' as 'absolute',
@@ -20,10 +20,13 @@ interface ModalMUIProps {
     bgcolor?: string,
     btnname?: string,
     children?: React.ReactNode,
+    open?: boolean,
+    //setState syntax
+    setOpen: Dispatch<SetStateAction<boolean>> 
 }
 
-const ModalMUI:FC<ModalMUIProps> = ({ bgcolor, btnname, children }) => {
-    const [open, setOpen] = useState(false);
+const ModalMUI:FC<ModalMUIProps> = ({ bgcolor, btnname, children, open, setOpen }) => {
+    // const [open, setOpen] = useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
 

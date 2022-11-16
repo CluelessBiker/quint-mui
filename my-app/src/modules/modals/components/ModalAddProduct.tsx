@@ -19,6 +19,22 @@ const ModalAddProduct = () => {
     // const [price, setPrice] = useState<number>(0); 
     // const [rating, setRating] = useState<number>(0); 
 
+    // const handleSaveClick = () => {
+    //     const newProduct: Product = {
+    //         id: 0,
+    //         title:'',
+    //         description:'',
+    //         price:0,
+    //         discountPercentage:0,
+    //         rating:0,
+    //         stock:0,
+    //         brand:'',
+    //         category:'',
+    //         thumbnail:'',
+    //     };
+    //     setOpen(false)
+    // }
+
     const [newProduct, setNewProduct] = useState<Product>({
             id: 0,
             title:'',
@@ -34,25 +50,19 @@ const ModalAddProduct = () => {
 
     // console.log(newProduct)
 
+    const [open, setOpen] = useState(false);
 
-    const handleClick = () => {
-        // const newProduct: Product = {
-            // id: 0,
-            // title:'',
-            // description:'',
-            // price:0,
-            // discountPercentage:0,
-            // rating:0,
-            // stock:0,
-            // brand:'',
-            // category:'',
-            // thumbnail:'',
-        // };
-        appDispatch(addProduct(newProduct))
+    const handleSaveClick = () => {
+        appDispatch(addProduct(newProduct));
+        setOpen(false)
+    }
+
+    const handleCancelClick = () => {
+        setOpen(false)
     }
 
     return (
-        <ModalMUI bgcolor="87DAC1" btnname="+ New Employee">
+        <ModalMUI bgcolor="87DAC1" btnname="+ New Employee" open={open} setOpen={setOpen}>
             <Typography
                 variant="h6"
                 gutterBottom
@@ -71,8 +81,8 @@ const ModalAddProduct = () => {
             <FormField label="category" value={newProduct?.category} onChange={(event)=>{setNewProduct({...newProduct, category: event.target.value})}}/>
             <FormField label="thumbnail" value={newProduct?.thumbnail} onChange={(event)=>{setNewProduct({...newProduct, thumbnail: event.target.value})}}/>
 
-            <SiteButtons name="Cancel" bgcolor="FC9595"/>
-            <SiteButtons name="Save" clickfunct={handleClick} bgcolor="87DAC1"/>
+            <SiteButtons name="Cancel" clickfunct={handleCancelClick} bgcolor="FC9595"/>
+            <SiteButtons name="Save" clickfunct={handleSaveClick} bgcolor="87DAC1"/>
         </ModalMUI>
     )
 }
