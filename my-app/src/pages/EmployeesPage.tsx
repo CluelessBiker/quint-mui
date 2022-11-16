@@ -2,8 +2,11 @@ import { Container, Grid, Typography } from '@mui/material'
 import HRLine from '../modules/common/components/HRLine'
 import ModalAddProduct from '../modules/modals/components/ModalAddProduct'
 import ProductsTable from '../modules/tables/components/ProductsTable'
+import { useAppDispatch } from '../redux/hooks'
+import { addProduct } from '../redux/productsSlice'
 
 const EmployeesPage = () => {
+    const dispatch = useAppDispatch()
 
     return (
         <Container
@@ -34,6 +37,8 @@ const EmployeesPage = () => {
             </Grid>
 
             <ProductsTable />
+
+
 
         </Container>
     )
