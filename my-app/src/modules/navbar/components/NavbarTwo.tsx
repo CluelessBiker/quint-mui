@@ -117,9 +117,9 @@ function NavbarTwo() {
                     display: { xs: 'block', md: 'none' },
                 }}
                 >
-                {pages.map((page) => (
+                {pages.map((page, index) => (
                     <MenuItem
-                        // key={page}
+                        key={index}
                         onClick={handleCloseNavMenu}
                     >
                         <Typography textAlign="center">{page}</Typography>
@@ -151,9 +151,9 @@ function NavbarTwo() {
                 display: { xs: 'none', md: 'flex' },
                 }}
             >
-                {pages.map((page) => (
+                {pages.map((page, index) => (
                 <Button
-                    // key={page}
+                    key={index}
                     onClick={handleCloseNavMenu}
                     sx={{ my: 2, color: '#000000', display: 'block' }}
                 >
@@ -184,9 +184,9 @@ function NavbarTwo() {
                 open={Boolean(anchorElUser)}
                 onClose={handleCloseUserMenu}
                 >
-                {settings.map((setting) => (
+                {settings.map((setting, index) => (
                     <MenuItem
-                        // key={setting}
+                        key={index}
                         onClick={handleCloseUserMenu}
                     >
                     <Typography textAlign="center">{setting}</Typography>
