@@ -29,29 +29,29 @@ const ModalMUI:FC<ModalMUIProps> = ({ bgcolor, btnname, children }) => {
 
     return (
         <div>
-        <Button
-            onClick={handleOpen}
-            sx={{
-                borderRadius: '10px',
-                border:'1px solid #333333',
-                width: '155px',
-                color: '#000000',
-                textTransform: 'none',
-                backgroundColor: `#${ bgcolor }`,
-            }}
-        >
-            { btnname }
-        </Button>
-        <Modal
-            open={open}
-            onClose={handleClose}
-            aria-labelledby="modal-modal-title"
-            aria-describedby="modal-modal-description"
-        >
-            <Box sx={style}>
-                { children }
-            </Box>
-        </Modal>
+            <Button
+                onClick={handleOpen}
+                sx={{
+                    borderRadius: '10px',
+                    border:'1px solid #333333',
+                    width: '155px',
+                    color: '#000000',
+                    textTransform: 'none',
+                    backgroundColor: `#${ bgcolor }`,
+                }}
+            >
+                { btnname }
+            </Button>
+            <Modal
+                open={open}
+                onClose={handleClose}
+                aria-labelledby="modal-modal-title"
+                aria-describedby="modal-modal-description"
+            >
+                <Box sx={style}>
+                    { children }
+                </Box>
+            </Modal>
         </div>
     );
 }
