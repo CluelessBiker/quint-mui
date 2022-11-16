@@ -20,34 +20,33 @@ const ModalAddProduct = () => {
     // const [rating, setRating] = useState<number>(0); 
 
     const [newProduct, setNewProduct] = useState<Product>({
-             id: 0,
+            id: 0,
             title:'',
             description:'',
+            price:0,
             discountPercentage:0,
+            rating:0,
             stock:0,
             brand:'',
             category:'',
             thumbnail:'',
-            price:0,
-            rating:0
-
     })
 
-    console.log(newProduct)
+    // console.log(newProduct)
 
 
     const handleClick = () => {
         // const newProduct: Product = {
-        //     id: 0,
-        //     title,
-        //     description,
-        //     discountPercentage,
-        //     stock,
-        //     brand,
-        //     category,
-        //     thumbnail,
-        //     price,
-        //     rating
+            // id: 0,
+            // title:'',
+            // description:'',
+            // price:0,
+            // discountPercentage:0,
+            // rating:0,
+            // stock:0,
+            // brand:'',
+            // category:'',
+            // thumbnail:'',
         // };
         appDispatch(addProduct(newProduct))
     }
@@ -72,8 +71,8 @@ const ModalAddProduct = () => {
             <FormField label="category"/>
             <FormField label="thumbnail"/> */}
 
-            <SiteButtons name="Cancel" clickfunct={handleClick} bgcolor="FC9595"/>
-            <SiteButtons name="Save"  bgcolor="87DAC1"/>
+            <SiteButtons name="Cancel" bgcolor="FC9595"/>
+            <SiteButtons name="Save" clickfunct={handleClick} bgcolor="87DAC1"/>
         </ModalMUI>
     )
 }
