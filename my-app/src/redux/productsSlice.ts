@@ -87,8 +87,14 @@ const productsSlice = createSlice({
         },
         removeProduct: state => {
             state.products.pop()
-            console.log("everybody was kungfu fighting")
-        }
+        },
+        // removeProductById: (state, action: Payload<number>) => {
+            
+        //     const indexOfObject = state.products.findIndex(object => {
+        //         object.id === action.payload;
+        //         state.products(indexOfObject)
+        //     })
+        // }
     }
 })
 
