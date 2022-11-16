@@ -60,16 +60,16 @@ const ModalAddProduct = () => {
             >
                 Add Product
             </Typography>
-            <FormField label="title" value={newProduct?.title} onChange={(event)=>{setNewProduct({...newProduct, title: event.target.value})}}/>
             {/* <FormField label="title" value={title} onChange={(event)=>{setTitle(event.target.value)}}/> */}
-            {/* <FormField label="description"/>
-            <FormField label="price"/>
-            <FormField label="discountPercentage"/>
-            <FormField label="rating"/>
-            <FormField label="stock"/>
-            <FormField label="brand"/>
-            <FormField label="category"/>
-            <FormField label="thumbnail"/> */}
+            <FormField label="title" value={newProduct?.title} onChange={(event)=>{setNewProduct({...newProduct, title: event.target.value})}}/>
+            <FormField label="description" value={newProduct?.description} onChange={(event)=>{setNewProduct({...newProduct, description: event.target.value})}}/>
+            <FormField label="price" value={newProduct?.price} onChange={(event)=>{setNewProduct({...newProduct, price: event.target.value})}}/>
+            <FormField label="discountPercentage" value={newProduct?.discountPercentage} onChange={(event)=>{setNewProduct({...newProduct, discountPercentage: event.target.value})}}/>
+            <FormField label="rating" value={newProduct?.rating} onChange={(event)=>{setNewProduct({...newProduct, rating: event.target.value})}}/>
+            <FormField label="stock" value={newProduct?.stock} onChange={(event)=>{setNewProduct({...newProduct, stock: event.target.value})}}/>
+            <FormField label="brand" value={newProduct?.brand} onChange={(event)=>{setNewProduct({...newProduct, brand: event.target.value})}}/>
+            <FormField label="category" value={newProduct?.category} onChange={(event)=>{setNewProduct({...newProduct, category: event.target.value})}}/>
+            <FormField label="thumbnail" value={newProduct?.thumbnail} onChange={(event)=>{setNewProduct({...newProduct, thumbnail: event.target.value})}}/>
 
             <SiteButtons name="Cancel" bgcolor="FC9595"/>
             <SiteButtons name="Save" clickfunct={handleClick} bgcolor="87DAC1"/>
