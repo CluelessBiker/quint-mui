@@ -84,13 +84,13 @@ const productsSlice = createSlice({
     reducers: {
         addProduct: (state, action: PayloadAction<Product>) => {
             state.products.push(action.payload)
-            console.log("everybody was kungfu fighting")
         },
         removeProduct: state => {
             state.products.pop()
+            console.log("everybody was kungfu fighting")
         }
     }
 })
 
 export default productsSlice.reducer
-export const { addProduct } = productsSlice.actions
+export const { addProduct, removeProduct } = productsSlice.actions

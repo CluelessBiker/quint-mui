@@ -5,14 +5,19 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-import { useAppSelector } from '../../../redux/hooks';
-import { Product } from '../../../redux/productsSlice';
+import { useAppDispatch, useAppSelector } from '../../../redux/hooks';
+import { Product, removeProduct } from '../../../redux/productsSlice';
 import { Avatar } from '@mui/material';
+import SiteButtons from '../../common/components/SiteButtons';
 
 const ProductsTable = () => {
-    // const rows = initialState.products;
-    const products = useAppSelector(state => state.products.products)
-    // const rows = products
+    const products = useAppSelector(state => state.products.products);
+    const dispatch = useAppDispatch();
+
+    const deleteRow = () => {
+        dispatch(removeProduct())
+    }
+
     return (
         <TableContainer
             component={Paper}
@@ -39,11 +44,9 @@ const ProductsTable = () => {
                         <TableCell align="left">brand</TableCell>
                         <TableCell align="left">category</TableCell>
                         <TableCell align="left">thumbnail</TableCell>
-                        {/* <TableCell align="left">images</TableCell> */}
                     </TableRow>
                 </TableHead>
                 <TableBody>
-                    {/* {rows.map((row: Product) => ( */}
                     {products.map((row: Product) => (
                         <TableRow
                             key={row.id}
@@ -60,6 +63,9 @@ const ProductsTable = () => {
                             <TableCell align="left">{row.brand}</TableCell>
                             <TableCell align="left">{row.category}</TableCell>
                             <TableCell align="left"><Avatar alt={row.title} src={row.thumbnail} /></TableCell>
+                            <TableCell align="center">
+                                <SiteButtons name='delete' bgcolor='FC9595' clickfunct={deleteRow}/>
+                            </TableCell>
                         </TableRow>
                     ))}
                 </TableBody>
