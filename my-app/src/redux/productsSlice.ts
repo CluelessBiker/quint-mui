@@ -17,7 +17,7 @@ export interface Product {
     brand: string,
     category: string,
     thumbnail: string,
-    images: string[],
+    // images: string[],
 }
 
 export const initialState: ProductState = {
@@ -33,13 +33,13 @@ export const initialState: ProductState = {
             brand: "Apple",
             category: "smartphones",
             thumbnail: "https://dummyjson.com/image/i/products/1/thumbnail.jpg",
-            images: [
-            "https://dummyjson.com/image/i/products/1/1.jpg",
-            "https://dummyjson.com/image/i/products/1/2.jpg",
-            "https://dummyjson.com/image/i/products/1/3.jpg",
-            "https://dummyjson.com/image/i/products/1/4.jpg",
-            "https://dummyjson.com/image/i/products/1/thumbnail.jpg"
-            ]
+            // images: [
+            // "https://dummyjson.com/image/i/products/1/1.jpg",
+            // "https://dummyjson.com/image/i/products/1/2.jpg",
+            // "https://dummyjson.com/image/i/products/1/3.jpg",
+            // "https://dummyjson.com/image/i/products/1/4.jpg",
+            // "https://dummyjson.com/image/i/products/1/thumbnail.jpg"
+            // ]
         },
         {
             id: 2,
@@ -52,12 +52,12 @@ export const initialState: ProductState = {
             brand: "Apple",
             category: "smartphones",
             thumbnail: "https://dummyjson.com/image/i/products/2/thumbnail.jpg",
-            images: [
-            "https://dummyjson.com/image/i/products/2/1.jpg",
-            "https://dummyjson.com/image/i/products/2/2.jpg",
-            "https://dummyjson.com/image/i/products/2/3.jpg",
-            "https://dummyjson.com/image/i/products/2/thumbnail.jpg"
-            ]
+            // images: [
+            // "https://dummyjson.com/image/i/products/2/1.jpg",
+            // "https://dummyjson.com/image/i/products/2/2.jpg",
+            // "https://dummyjson.com/image/i/products/2/3.jpg",
+            // "https://dummyjson.com/image/i/products/2/thumbnail.jpg"
+            // ]
         },
         {
             id: 3,
@@ -70,9 +70,9 @@ export const initialState: ProductState = {
             brand: "Samsung",
             category: "smartphones",
             thumbnail: "https://dummyjson.com/image/i/products/3/thumbnail.jpg",
-            images: [
-            "https://dummyjson.com/image/i/products/3/1.jpg"
-            ]
+            // images: [
+            // "https://dummyjson.com/image/i/products/3/1.jpg"
+            // ]
         }
     ],
     status: "loading",
@@ -84,6 +84,10 @@ const productsSlice = createSlice({
     reducers: {
         addProduct: (state, action: PayloadAction<Product>) => {
             state.products.push(action.payload)
+            console.log("everybody was kungfu fighting")
+        },
+        removeProduct: state => {
+            state.products.pop()
         }
     }
 })
