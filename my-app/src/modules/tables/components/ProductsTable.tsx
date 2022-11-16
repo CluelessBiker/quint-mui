@@ -5,13 +5,13 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-// import { useAppSelector } from '../../../redux/hooks';
-import { initialState, Product } from '../../../redux/productsSlice';
+import { useAppSelector } from '../../../redux/hooks';
+import { Product } from '../../../redux/productsSlice';
 import { Avatar } from '@mui/material';
 
 const ProductsTable = () => {
-    const rows = initialState.products;
-    // const products = useAppSelector(state => state.products.products)
+    // const rows = initialState.products;
+    const products = useAppSelector(state => state.products.products)
     // const rows = products
     return (
         <TableContainer
@@ -44,7 +44,7 @@ const ProductsTable = () => {
                 </TableHead>
                 <TableBody>
                     {/* {rows.map((row: Product) => ( */}
-                    {rows.map((row: Product) => (
+                    {products.map((row: Product) => (
                         <TableRow
                             key={row.id}
                             sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
