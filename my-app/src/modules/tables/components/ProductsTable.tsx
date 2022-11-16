@@ -47,22 +47,22 @@ const ProductsTable = () => {
                     </TableRow>
                 </TableHead>
                 <TableBody>
-                    {products.map((row: Product) => (
+                    {products.map((product: Product) => (
                         <TableRow
-                            key={row.id}
+                            key={product.id}
                             sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                         >
                             <TableCell component="th" scope="row">
-                                {row.title}
+                                {product.title}
                             </TableCell>
-                            <TableCell align="left">{row.description}</TableCell>
-                            <TableCell align="left">{row.price}</TableCell>
-                            <TableCell align="left">{row.discountPercentage}</TableCell>
-                            <TableCell align="left">{row.rating}</TableCell>
-                            <TableCell align="left">{row.stock}</TableCell>
-                            <TableCell align="left">{row.brand}</TableCell>
-                            <TableCell align="left">{row.category}</TableCell>
-                            <TableCell align="left"><Avatar alt={row.title} src={row.thumbnail} /></TableCell>
+                            <TableCell align="left">{product.description}</TableCell>
+                            <TableCell align="left">{product.price}</TableCell>
+                            <TableCell align="left">{product.discountPercentage}</TableCell>
+                            <TableCell align="left">{product.rating}</TableCell>
+                            <TableCell align="left">{product.stock}</TableCell>
+                            <TableCell align="left">{product.brand}</TableCell>
+                            <TableCell align="left">{product.category}</TableCell>
+                            <TableCell align="left"><Avatar alt={product.title} src={product.thumbnail} /></TableCell>
                             <TableCell align="center">
                                 <SiteButtons name='delete' bgcolor='FC9595' clickfunct={deleteRow}/>
                             </TableCell>
