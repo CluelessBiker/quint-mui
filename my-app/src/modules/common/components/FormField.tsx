@@ -3,9 +3,11 @@ import { FC } from 'react';
 
 interface FormFieldProps {
     label: string,
+    value?: string,
+    onChange?: (event: React.ChangeEvent<HTMLInputElement>)=>void
 }
 
-const FormField:FC<FormFieldProps> = ({ label }) => {
+const FormField:FC<FormFieldProps> = ({ label, value, onChange }) => {
     return (
         <TextField
             id="outlined-basic"
@@ -15,6 +17,8 @@ const FormField:FC<FormFieldProps> = ({ label }) => {
                 width: '400px',
                 margin: '0 0 30px 0',
             }}
+            value={value}
+            onChange={onChange}
         />
     )
 }
